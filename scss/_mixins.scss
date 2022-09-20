@@ -3,11 +3,11 @@
     flex-direction: $direction;
 }
 
-@mixin backgPic(
+@mixin bgPic(
     $url,
-    width: 20vh,
-    height: 20vh,
-    $size: cover
+    $width: 20vh,
+    $height: 20vh,
+    $size : cover
 ){
     background-image: url($url);
     background-position: center;
