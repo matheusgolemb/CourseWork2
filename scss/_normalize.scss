@@ -17,3 +17,33 @@ p {
 html {
     scroll-behavior: smooth;
 }
+
+input, textarea {
+    padding: 1%;
+    background-color: transparent;
+    border: 0px none transparent;
+    border-bottom: 1px solid dimgray;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+[type="submit"] {
+    width: 20vh;
+    background-color: $defaultGreen;
+    color: white;
+}
+textarea {
+    resize: none;
+    height: 20vh;
+}
+
+[class*="brands"] {
+    padding: 3%;
+}
+
+[class*="brands"]:hover {
+    background-color: $defaultPink !important;
+    color: white !important;
+    padding: 3%;
+}

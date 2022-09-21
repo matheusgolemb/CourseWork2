@@ -17,6 +17,46 @@ html {
   scroll-behavior: smooth;
 }
 
+input, textarea {
+  padding: 1%;
+  background-color: transparent;
+  border: 0px none transparent;
+  border-bottom: 1px solid dimgray;
+}
+
+::-moz-placeholder {
+  font-size: 14px;
+}
+
+:-ms-input-placeholder {
+  font-size: 14px;
+}
+
+::placeholder {
+  font-size: 14px;
+}
+
+[type=submit] {
+  width: 20vh;
+  background-color: #319966;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  height: 20vh;
+}
+
+[class*=brands] {
+  padding: 3%;
+}
+
+[class*=brands]:hover {
+  background-color: #CC3399 !important;
+  color: white !important;
+  padding: 3%;
+}
+
 @media (min-width: 200px) {
   body,
 main,
@@ -55,6 +95,7 @@ main > section {
     text-align: right;
     width: 100%;
     height: 40%;
+    transition: 0.4s;
   }
   header figure {
     height: 40%;
@@ -67,15 +108,19 @@ main > section {
     flex-direction: column;
   }
   header li {
-    text-decoration: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted;
+    text-decoration: none;
+    border-bottom: 1px solid whitesmoke;
   }
   header a {
     padding: 1%;
     color: white;
     text-transform: capitalize;
     text-decoration: none;
+    transition: 0.4s;
+  }
+  header a:hover {
+    color: lightgreen;
+    text-decoration: underline;
   }
   main > section {
     padding: 5%;
@@ -90,8 +135,11 @@ main > section {
     row-gap: 2vh;
   }
   .article-title h2 {
-    color: green;
+    color: #319966;
     text-transform: capitalize;
+  }
+  .about {
+    padding-top: 15%;
   }
   .about figure,
 .about figcaption,
@@ -118,11 +166,11 @@ main > section {
     width: 95%;
   }
   .about figcaption h3 {
-    color: skyblue;
+    color: #0099CC;
     text-transform: capitalize;
   }
   .about figcaption span {
-    color: darkmagenta;
+    color: #CC3399;
   }
   .about figcaption aside {
     flex-direction: row;
@@ -133,5 +181,248 @@ main > section {
     color: gray;
     text-decoration: none;
     font-size: 24px;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+  }
+  .features > .feature-pic {
+    background-image: url("/img/history-restaurant.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: inherit;
+    height: 25vh;
+  }
+  .features > section,
+.features > section > aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    align-items: center;
+  }
+  .features > section {
+    row-gap: 15vh;
+  }
+  .features > section aside {
+    text-align: center;
+    color: gray;
+  }
+  .features > section aside i {
+    font-size: 60px;
+  }
+  .features > section aside a {
+    background-color: #0099CC;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 2% 5%;
+    color: white;
+    transition: 0.4s;
+  }
+  .features > section aside a:hover {
+    background-color: darkblue;
+    text-decoration: underline;
+  }
+  .features > section aside .a-green {
+    background-color: #319966;
+  }
+  .features > section aside .a-green:hover {
+    background-color: darkgreen;
+  }
+  .features > section aside .a-red {
+    background-color: darkred;
+  }
+  .features > section aside .a-red:hover {
+    background-color: rgb(86, 5, 5);
+  }
+  .features > figure {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+  }
+  .features > figure img {
+    height: 25vh;
+  }
+  .features > figure figcaption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .features > figure figcaption h3 {
+    color: #0099CC;
+  }
+  .menu {
+    row-gap: 7vh;
+    color: dimgray;
+  }
+  .menu > .a-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+    row-gap: 3vh;
+    justify-content: center;
+  }
+  .menu > .a-wrapper a {
+    background-color: transparent;
+    border: 1px solid #319966;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #319966;
+    text-align: center;
+    padding: 2% 5%;
+    width: 20vh;
+    transition: 0.4s;
+  }
+  .menu > .a-wrapper a:hover {
+    background-color: #319966;
+    color: white;
+  }
+  .menu > section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+    align-items: center;
+  }
+  .menu > section figure,
+.menu > section figcaption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    align-items: center;
+  }
+  .menu > section figcaption {
+    width: 40vh;
+    align-items: unset;
+  }
+  .menu > section figcaption h4 {
+    color: #0099CC;
+    font-size: 16px;
+  }
+  .menu > section figcaption p {
+    font-size: 14px;
+  }
+  .menu > section figcaption span {
+    color: #319966;
+  }
+  .menu > section img {
+    height: 40vh;
+    width: 40vh;
+  }
+  .menu > article:last-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+  }
+  .menu > article:last-child > article {
+    background-image: url("/img/avocado.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: inherit;
+    height: 30vh;
+  }
+  .menu > article:last-child > aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .menu > article:last-child > aside h4 {
+    color: #0099CC;
+  }
+  .menu > article:last-child > aside > a {
+    color: dimgray;
+    text-decoration: none;
+    border: 1px solid dimgray;
+    padding: 2% 5%;
+    width: 20vh;
+    text-align: center;
+    align-self: flex-end;
+  }
+  .menu > article:last-child > aside a:hover {
+    background-color: gray;
+    color: white;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+    padding-bottom: 20%;
+  }
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .contact form [type=submit] {
+    align-self: flex-end;
+  }
+  .contact form [type=submit]:hover {
+    background-color: darkgreen;
+    text-decoration: underline;
+  }
+  .contact section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .contact section > article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .contact section h4 {
+    color: #319966;
+    text-transform: capitalize;
+  }
+  .contact section ul, .contact section li {
+    display: flex;
+    flex-direction: row;
+  }
+  .contact section ul {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+  }
+  .contact section li {
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+    align-items: center;
+  }
+  .contact section li a, .contact section li i {
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .contact section li i {
+    color: #319966;
+  }
+  .contact section li a:hover {
+    text-decoration: underline;
+  }
+  .contact section a {
+    color: dimgray;
+    text-decoration: none;
+  }
+  .contact section aside {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+  }
+  .contact section aside a {
+    font-size: 22px;
+  }
+  .contact .faq {
+    row-gap: 10vh;
+  }
+  footer {
+    padding: 2% 2% 2% 0%;
+    font-size: 14px;
+    color: dimgray;
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */

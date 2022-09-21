@@ -1,4 +1,6 @@
 @media (min-width: 200px) {
+
+
     body, 
     main, 
     header,
@@ -36,13 +38,14 @@
             text-align: right;
             width: 100%;
             height: 40%;
+            transition: .4s;
         }
         figure {
             height: 40%;
             
         }
         summary {
-            font-size: 26px
+            font-size: 26px;
         }
 
         ul, li{
@@ -50,14 +53,19 @@
         }
 
         li {
-            text-decoration: underline;
-            text-decoration-style: dotted;
+            text-decoration: none;
+            border-bottom: 1px solid whitesmoke;
         }
         a {
             padding: 1%;
             color: white;
             text-transform: capitalize;
             text-decoration: none;
+            transition: .4s;
+        }
+        a:hover {
+            color: lightgreen;
+            text-decoration: underline;
         }
         // END HEADER
     }
@@ -72,7 +80,7 @@
         text-align: center;
 
         h2 {
-            color: green;
+            color: $defaultGreen;
             text-transform: capitalize;
         }
 
@@ -81,6 +89,8 @@
     }
 
     .about {
+        padding-top: 15%;
+
         figure, 
         figcaption, 
         aside,
@@ -104,17 +114,16 @@
             padding-left: 5%;
             width: 95%;
             h3 {
-                color: skyblue;
+                color: $defaultBlue;
                 text-transform: capitalize;
             }
             span {
-                color: darkmagenta;
+                color: $defaultPink;
             }
             aside {
                 flex-direction: row;
                 column-gap: 4vh;
             }
-            
             aside a {
                 color: gray;
                 text-decoration: none;
@@ -124,4 +133,260 @@
         // END FIGCAPTION
     }
     // END ABOUT
+
+    // START FEATURES SECTION
+    .features {
+        @include flexBox(column);
+        row-gap: 10vh;
+        > .feature-pic {
+            @include bgPic("/img/history-restaurant.jpg", inherit, 25vh, cover);
+        }
+        > section,
+        > section > aside {
+            @include flexBox(column);
+            row-gap: 3vh;
+            align-items: center;
+        }
+        > section {
+            row-gap: 15vh;
+        }
+
+        > section aside {
+            text-align: center;
+            color: gray;
+            i {
+                font-size: 60px;
+            }
+            a {
+                background-color: $defaultBlue;
+                text-decoration: none;
+                text-transform: capitalize;
+                padding: 2% 5%;
+                color: white;
+                transition: .4s;
+            }
+            a:hover {
+                background-color: darkblue;
+                text-decoration: underline;
+            }
+
+            .a-green {
+                background-color: $defaultGreen;
+            }
+            .a-green:hover {
+                background-color: darkgreen;
+            }
+
+            .a-red {
+                background-color: darkred;
+            }
+            .a-red:hover {
+                background-color: rgb(86, 5, 5);
+            }
+        }
+
+        > figure {
+            @include flexBox(column);
+            row-gap: 2vh;
+
+            img {
+                height: 25vh;
+            }
+
+            figcaption {
+                @include flexBox(column);
+                row-gap: 3vh;
+
+                h3 {
+                    color: $defaultBlue;
+                }
+            }
+        }
+    }
+    // END FEATURES SECTION
+
+    // START MENU SECTION
+    .menu {
+        row-gap: 7vh;
+        color: dimgray;
+        > .a-wrapper {
+            // border: 1px solid red;
+            @include flexBox(row);
+            flex-wrap: wrap;
+            column-gap: 3vh;
+            row-gap: 3vh;
+            justify-content: center;
+            a {
+                background-color: transparent;
+                border: 1px solid $defaultGreen;
+                text-decoration: none;
+                text-transform: capitalize;
+                color: $defaultGreen;
+                text-align: center;
+                padding: 2% 5%;
+                width: 20vh;
+                transition: .4s;
+            }
+            a:hover {
+                background-color: $defaultGreen;
+                color: white;
+            }
+        }
+        > section {
+            @include flexBox(column);
+            row-gap: 10vh;
+            align-items: center;
+            figure,
+            figcaption {
+                @include flexBox(column);
+                row-gap: 3vh;
+                align-items: center;
+            }
+            figcaption {
+                width: 40vh;
+                // border: 1px solid red;
+                align-items: unset;
+
+                h4 {
+                    color: $defaultBlue;
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 14px;
+                }
+
+                span {
+                    color: $defaultGreen;
+                }
+            }
+            img {
+                height: 40vh;
+                width: 40vh;
+            }
+        }
+
+        > article:last-child {
+            // border: 1px solid red;
+            @include flexBox(column);
+            row-gap: 5vh;
+
+            > article {
+                @include bgPic("/img/avocado.jpg", inherit, 30vh, cover);
+            }
+
+            > aside {
+                @include flexBox(column);
+                row-gap: 3vh;
+
+                h4 {
+                    color: $defaultBlue;
+                }
+
+                > a {
+                    color: dimgray;
+                    text-decoration: none;
+                    border: 1px solid dimgray;
+                    padding: 2% 5%;
+                    width: 20vh;
+                    text-align: center;
+                    align-self: flex-end;
+                }
+
+                a:hover {
+                    background-color: gray;
+                    color: white;
+                }
+            }
+        }
+    }
+    // END MENU SECTION
+
+
+    // START CONTACT SECTION
+    .contact {
+        @include flexBox(column);
+        row-gap: 10vh;
+        padding-bottom: 20%;
+        form {
+            @include flexBox(column);
+            row-gap: 3vh;
+
+            [type="submit"] {
+                align-self: flex-end;
+            }
+            [type="submit"]:hover {
+                background-color: darkgreen;
+                text-decoration: underline
+            }
+        }
+
+        section {
+            @include flexBox(column);
+            row-gap: 3vh;
+            > article {
+                @include flexBox(column);
+                row-gap: 3vh;
+            }
+            h4 {
+                color: $defaultGreen;
+                text-transform: capitalize;
+            }
+
+            ul, li{
+                @include flexBox(row);
+            }
+            ul {
+                // border: 1px solid red;
+                width: 100%;
+                justify-content: space-between;
+                padding: 0;
+                column-gap: 2vh;
+            }
+            li {
+                column-gap: 1vh;
+                align-items: center;
+                a, i {
+                    font-size: 16px;
+                    text-decoration: none;
+                }
+                i {
+                    color: $defaultGreen;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+            a {
+                color: dimgray;
+                text-decoration: none;
+            }
+
+
+            aside {
+                @include flexBox(row);
+                column-gap: 3vh;
+
+                a {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .faq {
+            row-gap: 10vh;
+        }
+        
+    }
+    // END CONTACT SECTION
+
+    footer {
+        padding: 2% 2% 2% 0%;
+        font-size: 14px;
+        color: dimgray;
+        text-align: center;
+
+    }
+
+
 }
+// end media mobile
