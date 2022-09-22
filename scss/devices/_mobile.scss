@@ -320,7 +320,7 @@
             }
         }
 
-        section {
+        section:nth-child(2) {
             @include flexBox(column);
             row-gap: 3vh;
             > article {
@@ -373,9 +373,14 @@
         }
 
         .faq {
+            @include flexBox(column);
             row-gap: 10vh;
         }
         
+        .accordion-item, .accordion-button{
+            background-color: transparent;
+            color: dimgray;
+        }
     }
     // END CONTACT SECTION
 

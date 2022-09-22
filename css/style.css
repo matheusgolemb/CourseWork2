@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
 * {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -363,61 +364,67 @@ main > section {
     background-color: darkgreen;
     text-decoration: underline;
   }
-  .contact section {
+  .contact section:nth-child(2) {
     display: flex;
     flex-direction: column;
     row-gap: 3vh;
   }
-  .contact section > article {
+  .contact section:nth-child(2) > article {
     display: flex;
     flex-direction: column;
     row-gap: 3vh;
   }
-  .contact section h4 {
+  .contact section:nth-child(2) h4 {
     color: #319966;
     text-transform: capitalize;
   }
-  .contact section ul, .contact section li {
+  .contact section:nth-child(2) ul, .contact section:nth-child(2) li {
     display: flex;
     flex-direction: row;
   }
-  .contact section ul {
+  .contact section:nth-child(2) ul {
     width: 100%;
     justify-content: space-between;
     padding: 0;
     -moz-column-gap: 2vh;
          column-gap: 2vh;
   }
-  .contact section li {
+  .contact section:nth-child(2) li {
     -moz-column-gap: 1vh;
          column-gap: 1vh;
     align-items: center;
   }
-  .contact section li a, .contact section li i {
+  .contact section:nth-child(2) li a, .contact section:nth-child(2) li i {
     font-size: 16px;
     text-decoration: none;
   }
-  .contact section li i {
+  .contact section:nth-child(2) li i {
     color: #319966;
   }
-  .contact section li a:hover {
+  .contact section:nth-child(2) li a:hover {
     text-decoration: underline;
   }
-  .contact section a {
+  .contact section:nth-child(2) a {
     color: dimgray;
     text-decoration: none;
   }
-  .contact section aside {
+  .contact section:nth-child(2) aside {
     display: flex;
     flex-direction: row;
     -moz-column-gap: 3vh;
          column-gap: 3vh;
   }
-  .contact section aside a {
+  .contact section:nth-child(2) aside a {
     font-size: 22px;
   }
   .contact .faq {
+    display: flex;
+    flex-direction: column;
     row-gap: 10vh;
+  }
+  .contact .accordion-item, .contact .accordion-button {
+    background-color: transparent;
+    color: dimgray;
   }
   footer {
     padding: 2% 2% 2% 0%;
@@ -570,5 +577,142 @@ main > section {
   }
   .contact .faq {
     row-gap: 5vh;
+  }
+}
+@media (min-width: 1000px) {
+  p {
+    font-size: 18px;
+  }
+  header {
+    height: 60vh;
+  }
+  header > section {
+    height: inherit;
+    align-items: flex-end;
+    padding: 1% 5%;
+  }
+  header img {
+    height: 15vh;
+  }
+  header figure {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  header h1 {
+    font-size: 32px;
+  }
+  header p {
+    font-size: 18px;
+  }
+  header nav {
+    font-size: 18px;
+  }
+  .about {
+    padding-top: 5%;
+    align-items: center;
+  }
+  .about span {
+    font-size: 18px;
+  }
+  .about section article {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about section article figure {
+    width: 45%;
+  }
+  .about section article img {
+    height: 40vh;
+    width: 35vh;
+  }
+  .article-title {
+    width: 60%;
+  }
+  main > section {
+    align-items: center;
+  }
+  .features {
+    row-gap: 7vh;
+  }
+  .features > .feature-pic {
+    width: 100%;
+    height: 50vh;
+    background-position: 50% 70%;
+  }
+  .features > section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .features > section aside {
+    width: 25%;
+  }
+  .features > figure {
+    padding-top: 5%;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+  }
+  .features > figure img {
+    height: 40vh;
+    width: 70vh;
+  }
+  .features > figure figcaption {
+    width: 50%;
+  }
+  .menu > section {
+    justify-content: center;
+    -moz-column-gap: 7vh;
+         column-gap: 7vh;
+    row-gap: 10vh;
+  }
+  .menu > section img {
+    height: 35vh;
+    width: 35vh;
+  }
+  .menu > section figcaption {
+    width: 35vh;
+  }
+  .menu > section figcaption h4 {
+    font-size: 20px;
+  }
+  .menu > section figcaption p {
+    font-size: 16px;
+  }
+  .menu > article:last-child {
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+    padding-top: 10%;
+    width: 80%;
+  }
+  .menu > article:last-child .avocado-pic {
+    width: 75vh;
+    height: 40vh;
+  }
+  .menu > article:last-child > aside > a {
+    width: 25vh;
+  }
+  .contact {
+    padding-bottom: 5%;
+  }
+  .contact > section {
+    width: 80%;
+  }
+  .contact [type=submit] {
+    width: 15vh;
+  }
+  .contact .faq {
+    align-items: center;
+  }
+  .contact .faq .accordion {
+    width: 80%;
+  }
+  .contact .faq .accordion-item p {
+    font-size: 16px;
+  }
+  .contact .faq .accordion-button {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
