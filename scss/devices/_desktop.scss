@@ -1,0 +1,140 @@
+@media (min-width: 1000px) {
+    p {
+        font-size: 18px;
+    }
+    header {
+        height: 60vh;
+        > section {
+            height: inherit;
+            align-items: flex-end;
+            padding: 1% 5%;
+        }
+        img {
+            height: 15vh;
+        }
+        figure {
+            height: fit-content;
+            width: fit-content;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+        nav {
+            font-size: 18px;
+        }
+    }
+
+    .about {
+        padding-top: 5%;
+        align-items: center;
+        span {
+            font-size: 18px;
+        }
+        section article {
+            flex-direction: row;
+            justify-content: space-between;
+            figure {
+                width: 45%;
+            }
+            img {
+                height: 40vh;
+                width: 35vh;
+            }
+        }
+    }
+
+    .article-title {
+        width: 60%;
+    }
+    main > section {
+        align-items: center;
+    }
+    .features {
+        row-gap: 7vh;
+        > .feature-pic {
+            width: 100%;
+            height: 50vh;
+            background-position: 50% 70%;
+        }
+        > section {
+            flex-direction: row;
+            justify-content: space-between;
+            aside {
+                width: 25%;
+            }
+        }
+        > figure {
+            padding-top: 5%;
+            column-gap: 5vh;
+            img {
+                height: 40vh;
+                width: 70vh;
+            }
+            figcaption {
+                width: 50%;
+            }
+        }
+    }
+
+    .menu {
+        > section {
+            justify-content: center;
+            column-gap: 7vh;
+            row-gap: 10vh;
+            img {
+                height: 35vh;
+                width: 35vh;
+            }
+            figcaption {
+                width: 35vh;
+
+                h4 {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+        > article:last-child {
+            column-gap: 5vh;
+            padding-top: 10%;
+            width: 80%;
+            .avocado-pic {
+                width: 75vh;
+                height: 40vh;
+            }
+            > aside {
+                > a {
+                    width: 25vh;
+                }
+            }
+        }
+    }
+
+    .contact {
+        padding-bottom: 5%;
+        > section {
+            width: 80%;
+        }
+        [type="submit"] {
+            width: 15vh;
+        }
+        .faq {
+            align-items: center;
+            .accordion {
+                width: 80%;
+            }
+            .accordion-item p {
+                font-size: 16px;
+
+            }
+            .accordion-button {
+                font-size: 20px;
+            }
+        }
+    }
+}
