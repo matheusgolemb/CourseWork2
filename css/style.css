@@ -425,4 +425,150 @@ main > section {
     color: dimgray;
     text-align: center;
   }
+}
+@media (min-width: 600px) {
+  main {
+    row-gap: 5vh;
+  }
+  header {
+    height: 40vh;
+  }
+  header section {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 2%;
+  }
+  header nav {
+    display: flex;
+    width: 60%;
+    align-items: flex-end;
+  }
+  header details {
+    display: none;
+  }
+  header figure {
+    width: 30%;
+  }
+  header ul {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  header ul li {
+    border: 0px none transparent;
+  }
+  header a:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+  .about {
+    row-gap: 5vh;
+  }
+  .about > section > article {
+    row-gap: 5vh;
+  }
+  .about > section {
+    row-gap: 5vh;
+  }
+  .about figure {
+    flex-direction: row;
+  }
+  .about figure img {
+    height: 30vh;
+    width: 20vh;
+  }
+  .about h3 {
+    margin: 0;
+  }
+  .about figcaption {
+    row-gap: 1vh;
+  }
+  .about figcaption p {
+    padding-top: 5%;
+  }
+  .about figcaption aside {
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+  }
+  .features {
+    row-gap: 10vh;
+  }
+  .features figure {
+    flex-direction: row;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+    align-items: center;
+  }
+  .features figure h3 {
+    font-size: 24px;
+  }
+  .features img {
+    height: 20vh;
+    width: 35vh;
+  }
+  .aside-wrapper {
+    padding-top: 5%;
+  }
+  .menu {
+    padding-top: 0%;
+  }
+  .menu .a-wrapper a {
+    width: 15vh;
+    text-align: center;
+  }
+  .menu > section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+    row-gap: 5vh;
+  }
+  .menu > section img {
+    height: 20vh;
+    width: 20vh;
+  }
+  .menu > section figcaption {
+    width: 20vh;
+    row-gap: 1vh;
+  }
+  .menu > article:last-child {
+    flex-direction: row;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+    width: 100%;
+  }
+  .menu > article:last-child .avocado-pic {
+    width: 35vh;
+    height: 18vh;
+  }
+  .menu > article:last-child aside {
+    width: 50%;
+  }
+  .menu > article:last-child aside > a {
+    width: 15vh;
+  }
+  .contact > section:nth-child(2) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact > section:nth-child(2) form {
+    width: 40%;
+  }
+  .contact > section:nth-child(2) blockquote {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .contact > section:nth-child(2) ul {
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .contact [type=submit] {
+    width: 10vh;
+  }
+  .contact .faq {
+    row-gap: 5vh;
+  }
 }/*# sourceMappingURL=style.css.map */
