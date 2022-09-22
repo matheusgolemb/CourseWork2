@@ -58,7 +58,7 @@ textarea {
   padding: 3%;
 }
 
-@media (min-width: 200px) {
+@media (min-width: 300px) {
   body,
 main,
 header,
@@ -433,7 +433,7 @@ main > section {
     text-align: center;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   main {
     row-gap: 5vh;
   }
